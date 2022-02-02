@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="acceso_denegado">Acceso Denegado</string>
+    <string name="access_denied">Su cuenta de usuario no tiene permisos para acceder a este recurso</string>
+    <string name="regresar">Regresar</string>
+</resources>

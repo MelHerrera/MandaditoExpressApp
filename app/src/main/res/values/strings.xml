@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">MandaditosExpress</string>
+    <string name="splash_text">El Mandadito Express</string>
+    <string name="keyNameIntro">firstLaunch</string>
+    <string name="empezar">Saltar</string>
+    <string name="txtusuario">Usuario</string>
+    <string name="txtcontraseña">Contraseña</string>
+    <string name="txtentrar">Iniciar Sesión</string>
+    <string name="iniciar_sesion">Iniciar Sesión</string>
+    <string name="olvidar_contraseña"><u>He olvidado mi contraseña</u></string>
+    <string name="guardar_inicio">Guardar inicio de sesión</string>
+    <string name="invitado"><u>Invitado</u></string>
+    <string name="registrarse"><u>Registrarse</u></string>
+    <string name="nombres">Nombres</string>
+    <string name="_1er_apellido">1er Apellido</string>
+    <string name="cedula">Cédula</string>
+    <string name="correo">Correo</string>
+    <string name="movil">Movil</string>
+    <string name="_2do_apellido">2do Apellido</string>
+    <string name="sexo">Sexo</string>
+    <string name="masculino">Masculino</string>
+    <string name="femeninio">Femeninio</string>
+    <string name="direccion">Dirección</string>
+    <string name="repertir_contrasena">Repertir contraseña</string>
+    <string name="empresa">Empresa</string>
+    <string name="nombre_empresa">Nombre de empresa</string>
+    <string name="numeroRuc">Número RUC</string>
+    <string name="acepta_los_terminos_y_condiciones">Acepta los terminos y condiciones</string>
+    <string name="colaboracion">¿En que te colaboramos hoy?</string>
+    <string name="envios">Envíos</string>
+    <string name="cotizaciones">Cotizaciones</string>
+    <string name="creditos">Créditos</string>
+    <string name="pagos">Pagos</string>
+
+
+    <!-- > Keys to pass data between activity    <!-->
+    <string name="keyNameRoles">roles</string>
+    <string name="keyNameWelcomeMsj">welcome message</string>
+    <!-- > end Keys  <!-->
+
+    <string name="acceso_denegado">Acceso Denegado</string>
+    <string name="access_denied">Su cuenta de usuario no tiene permisos para acceder a este recurso</string>
+    <string name="regresar">Regresar</string>
+    <string name="noCredits">0 créditos para mostrar</string>
+    <string name="noPagos">0 pagos para mostrar</string>
+    <string name="noCotizaciones">0 cotizaciones para mostrar</string>
+    <string name="descripcionDelPago">Pago de %1$s | %2$s | %3$s</string>
+    <string name="montoDelPago">Monto: %1$s</string>
+    <string name="tipoServicio">Tipo de Servicio</string>
+    <string name="todos">Todos</string>
+    <string name="seleccione">Seleccione</string>
+    <string name="guardar">Guardar</string>
+</resources>
