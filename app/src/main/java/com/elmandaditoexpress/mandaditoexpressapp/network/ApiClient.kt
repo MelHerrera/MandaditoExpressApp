@@ -36,6 +36,12 @@ interface ApiClient {
         @Query("ClienteId") clienteId:Int
     ): ResponseWsCotizaciones
 
+    //Obtener la imagen de perfil de una persona
+    @GET("PersonaWS/GetImagePerfilPersona")
+    suspend fun getImagenPerfilPersona(
+        @Query("PersonaId") personaId:Int,
+    ):ResponseWsImagenPersona
+
     //Registro
     @FormUrlEncoded
     @POST("PersonaWS/Registro")

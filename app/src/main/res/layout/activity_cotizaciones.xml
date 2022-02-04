@@ -7,23 +7,18 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_margin">
 
      <!--Filtro de cotizaciones por tipo de servicio -->
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:id="@+id/vFiltroTipoServicio"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/medium_margin"
-            android:orientation="horizontal"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
             <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/vFiltrarTipoServicio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:orientation="horizontal"
                 android:background="@drawable/rounded_view"
-                android:orientation="horizontal">
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
                 <ImageButton
                     android:id="@+id/filtroTipoServicio"
@@ -52,18 +47,20 @@
                 android:layout_marginStart="@dimen/medium_margin"
                 android:text="@string/todos"
                 android:textColor="@color/purple_500"
-                android:textStyle="bold" />
-        </androidx.appcompat.widget.LinearLayoutCompat>
+                android:textStyle="bold"
+                app:layout_constraintLeft_toRightOf="@+id/vFiltrarTipoServicio"
+                app:layout_constraintTop_toTopOf="@+id/vFiltrarTipoServicio"
+                app:layout_constraintBottom_toBottomOf="@+id/vFiltrarTipoServicio"/>
 
         <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
             android:id="@+id/vSwipeRefresh"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/medium_margin"
-            app:layout_constraintTop_toBottomOf="@+id/vFiltroTipoServicio"
-            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vFiltrarTipoServicio">
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/vRecyclerCotizaciones"

@@ -30,6 +30,8 @@ class CotizacionesActivity : AppCompatActivity() {
         binding = ActivityCotizacionesBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
         cargarTiposDeServicio()
         getCotizacionesDelCliente(-1, Utils.personaId)//Inicialmente cargar todas las cotizaciones
 
@@ -102,7 +104,6 @@ class CotizacionesActivity : AppCompatActivity() {
 
             if(apiResponse.exito) {
                 mostrarCotizaciones(apiResponse.cotizaciones)
-                Toast.makeText(applicationContext, apiResponse.mensaje, Toast.LENGTH_LONG).show()
             }
             else
                 Toast.makeText(applicationContext, apiResponse.mensaje, Toast.LENGTH_LONG).show()
@@ -112,5 +113,10 @@ class CotizacionesActivity : AppCompatActivity() {
     private fun mostrarCotizaciones(cotizaciones:ArrayList<ResponseWsCotizacion>){
         binding.vRecyclerCotizaciones.layoutManager = FlexboxLayoutManager(applicationContext)
         binding.vRecyclerCotizaciones.adapter = CotizacionesAdapter(cotizaciones)
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return super.onSupportNavigateUp()
     }
 }

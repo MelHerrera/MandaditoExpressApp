@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MandaditosExpress</string>
+    <string name="app_name">Mandaditos Express</string>
     <string name="splash_text">El Mandadito Express</string>
     <string name="keyNameIntro">firstLaunch</string>
     <string name="empezar">Saltar</string>
@@ -50,4 +50,6 @@
     <string name="todos">Todos</string>
     <string name="seleccione">Seleccione</string>
     <string name="guardar">Guardar</string>
+    <string name="menu_cerrarSesion">Cerrar sesión</string>
+    <string name="menu_acercaDe">Acerca de</string>
 </resources>
