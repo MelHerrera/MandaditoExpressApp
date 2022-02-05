@@ -24,6 +24,7 @@ class CreditosActivity : AppCompatActivity() {
         binding = ActivityCreditosBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
         binding.vSwipeRefresh.isRefreshing=true
         getCreditosDelCliente(Utils.personaId)//obtener inicialmente los creditos cuando carga la pantalla
         binding.vSwipeRefresh.isRefreshing=false
@@ -62,5 +63,10 @@ class CreditosActivity : AppCompatActivity() {
     private fun mostrarCreditos(creditos:ArrayList<ResponseWsCredito>){
         binding.recyLstCreditos.layoutManager = FlexboxLayoutManager(applicationContext)
         binding.recyLstCreditos.adapter = CreditosAdapter(creditos)
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return super.onSupportNavigateUp()
     }
 }

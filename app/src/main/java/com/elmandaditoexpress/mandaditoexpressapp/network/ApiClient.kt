@@ -47,4 +47,10 @@ interface ApiClient {
     @POST("PersonaWS/Registro")
     suspend fun Registro(@FieldMap registro: HashMap<String, String>
     ): ResponseWsRegistro
+
+    //Obtener envios de un cliente
+    @GET("EnviosWS/GetEnviosDelCliente")
+    suspend fun getEnviosDelCliente(
+        @Query("ClienteId") clienteId:Int
+    ): ResponseWsEnvios
 }

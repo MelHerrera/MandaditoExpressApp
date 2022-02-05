@@ -44,6 +44,7 @@
     <string name="noCredits">0 créditos para mostrar</string>
     <string name="noPagos">0 pagos para mostrar</string>
     <string name="noCotizaciones">0 cotizaciones para mostrar</string>
+    <string name="noEnvios">0 envíos para mostrar</string>
     <string name="descripcionDelPago">Pago de %1$s | %2$s | %3$s</string>
     <string name="montoDelPago">Monto: %1$s</string>
     <string name="tipoServicio">Tipo de Servicio</string>

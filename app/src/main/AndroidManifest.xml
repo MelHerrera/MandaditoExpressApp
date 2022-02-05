@@ -13,6 +13,9 @@
         android:theme="@style/Theme.MandaditosExpress"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".EnviosActivity"
+            android:exported="false" />
+        <activity
             android:name=".CotizacionesActivity"
             android:exported="false" />
         <activity

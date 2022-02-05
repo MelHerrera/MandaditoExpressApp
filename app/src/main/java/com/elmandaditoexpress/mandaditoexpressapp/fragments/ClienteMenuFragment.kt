@@ -9,10 +9,8 @@ import android.widget.Toast
 import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
-import com.elmandaditoexpress.mandaditoexpressapp.CotizacionesActivity
-import com.elmandaditoexpress.mandaditoexpressapp.CreditosActivity
-import com.elmandaditoexpress.mandaditoexpressapp.PagosActivity
-import com.elmandaditoexpress.mandaditoexpressapp.R
+import com.elmandaditoexpress.mandaditoexpressapp.*
+import com.elmandaditoexpress.mandaditoexpressapp.adapters.EnviosAdapter
 import com.elmandaditoexpress.mandaditoexpressapp.dto.ResponseWsImagenPersona
 import com.elmandaditoexpress.mandaditoexpressapp.network.ApiAdapter
 import com.elmandaditoexpress.mandaditoexpressapp.services.Utils
@@ -34,6 +32,8 @@ class ClienteMenuFragment(private val message:String?) : Fragment() {
         mView.findViewById<CardView>(R.id.vCardCreditos).setOnClickListener { goToListCreditos() }
         mView.findViewById<CardView>(R.id.vCardPagos).setOnClickListener { goToListPagos() }
         mView.findViewById<CardView>(R.id.vCardCotizaciones).setOnClickListener { goToListCotizaciones() }
+        mView.findViewById<CardView>(R.id.vCardEnvios).setOnClickListener { goToListEnvios() }
+
         getUserImage()
 
         return mView
@@ -47,6 +47,9 @@ class ClienteMenuFragment(private val message:String?) : Fragment() {
     }
     private fun goToListCotizaciones(){
         startActivity(Intent(context, CotizacionesActivity::class.java))
+    }
+    private fun goToListEnvios(){
+        startActivity(Intent(context, EnviosActivity::class.java))
     }
 
     private fun getUserImage(){

@@ -22,7 +22,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 class CotizacionesActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityCotizacionesBinding
+        private lateinit var binding: ActivityCotizacionesBinding
     private  lateinit var tiposDeServicio: ArrayList<ResponseWsTipoDeServicio>
 
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -24,6 +24,8 @@ class PagosActivity : AppCompatActivity() {
         binding = ActivityPagosBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
         binding.vSwipeRefresh.isRefreshing=true
         getPagosDelCliente(Utils.personaId)//obtener inicialmente los pagos cuando carga la pantalla
         binding.vSwipeRefresh.isRefreshing=false
@@ -63,5 +65,9 @@ class PagosActivity : AppCompatActivity() {
     private fun mostrarPagos(pagos:ArrayList<ResponseWsPago>){
         binding.vRecyclerPagos.layoutManager = FlexboxLayoutManager(applicationContext)
         binding.vRecyclerPagos.adapter = PagosAdapter(pagos, applicationContext)
+    }
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return super.onSupportNavigateUp()
     }
 }
