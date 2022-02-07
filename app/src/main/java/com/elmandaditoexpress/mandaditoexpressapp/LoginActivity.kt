@@ -75,6 +75,10 @@ class LoginActivity : AppCompatActivity() {
             }
         }
 
+        binding.tvOlvidoContraseA.setOnClickListener {
+            startActivity(Intent(applicationContext,ResetPasswordActivity::class.java))
+        }
+
     }
 
     private fun guardarPreferencia(estado: Boolean) {

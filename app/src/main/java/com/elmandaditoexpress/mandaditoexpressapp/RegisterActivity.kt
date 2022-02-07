@@ -8,6 +8,7 @@ import androidx.lifecycle.lifecycleScope
 import com.elmandaditoexpress.mandaditoexpressapp.databinding.ActivityRegisterBinding
 import com.elmandaditoexpress.mandaditoexpressapp.dto.ResponseWsRegistro
 import com.elmandaditoexpress.mandaditoexpressapp.network.ApiAdapter
+import com.elmandaditoexpress.mandaditoexpressapp.services.Utils
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -116,7 +117,7 @@ class RegisterActivity : AppCompatActivity() {
                 return isValidate
             }
 
-            !validarEmail(correoInput) ->
+            !Utils.validarEmail(correoInput) ->
             {
                 Toast.makeText(this,"Email Invalido",Toast.LENGTH_SHORT).show()
             }
@@ -188,10 +189,7 @@ class RegisterActivity : AppCompatActivity() {
         return isValidate
     }
 
-    private fun validarEmail(email: String): Boolean {
-        val pattern: Pattern = Patterns.EMAIL_ADDRESS
-        return pattern.matcher(email).matches()
-    }
+
 
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()

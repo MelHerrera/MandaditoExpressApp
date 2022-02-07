@@ -4,7 +4,9 @@ import android.content.res.ColorStateList
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.drawable.GradientDrawable
+import android.util.Patterns
 import com.elmandaditoexpress.mandaditoexpressapp.dto.enums.EnumEstadoDeEnvio
+import java.util.regex.Pattern
 import kotlin.reflect.KMutableProperty1
 
 class Utils {
@@ -52,6 +54,11 @@ class Utils {
             mDrawable.shape = shape
             mDrawable.cornerRadii = floatArrayOf(topLeftRadius, topLeftRadius, topRightRadius, topRightRadius, bottomRightRadius, bottomRightRadius, bottomLeftRadius, bottomLeftRadius)
             return mDrawable
+        }
+
+        fun validarEmail(email: String): Boolean {
+            val pattern: Pattern = Patterns.EMAIL_ADDRESS
+            return pattern.matcher(email).matches()
         }
     }
 }

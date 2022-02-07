@@ -53,4 +53,10 @@ interface ApiClient {
     suspend fun getEnviosDelCliente(
         @Query("ClienteId") clienteId:Int
     ): ResponseWsEnvios
+
+    //Enviar vinculo de reseto mediante correo electrónico
+    @POST("PersonaWS/ResetPassword")
+    suspend fun resetPassword(
+        @Query("Email") email: String
+    ): ResponseWsResetPassword
 }

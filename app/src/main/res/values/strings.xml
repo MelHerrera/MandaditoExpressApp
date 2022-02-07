@@ -14,7 +14,7 @@
     <string name="nombres">Nombres</string>
     <string name="_1er_apellido">1er Apellido</string>
     <string name="cedula">Cédula</string>
-    <string name="correo">Correo</string>
+    <string name="correo">Correo Electrónico</string>
     <string name="movil">Movil</string>
     <string name="_2do_apellido">2do Apellido</string>
     <string name="sexo">Sexo</string>
@@ -53,4 +53,6 @@
     <string name="guardar">Guardar</string>
     <string name="menu_cerrarSesion">Cerrar sesión</string>
     <string name="menu_acercaDe">Acerca de</string>
+    <string name="textOlvidoSuContrasenia">¿Olvidó su contraseña?</string>
+    <string name="textRestablecer">Restablecer</string>
 </resources>

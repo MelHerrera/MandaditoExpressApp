@@ -13,6 +13,9 @@
         android:theme="@style/Theme.MandaditosExpress"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".ResetPasswordActivity"
+            android:exported="false" />
+        <activity
             android:name=".EnviosActivity"
             android:exported="false" />
         <activity

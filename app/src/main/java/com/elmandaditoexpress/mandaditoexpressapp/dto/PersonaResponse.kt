@@ -21,3 +21,5 @@ data class ResponseWsImagenPersona(
         return imagen.contentHashCode()
     }
 }
+
+class ResponseWsResetPassword(): Serializable, Response()
