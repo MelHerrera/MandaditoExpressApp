@@ -31,5 +31,14 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <style name="Theme.MandaditosExpress.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.MandaditosExpress.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.MandaditosExpress.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
 
 </resources>

@@ -59,4 +59,10 @@ interface ApiClient {
     suspend fun resetPassword(
         @Query("Email") email: String
     ): ResponseWsResetPassword
+
+    //Obtener los pagos registrados por un motorizado
+    @GET("PagosWS/GetPagosDelMotorizado")
+    suspend fun getPagosDelMotorizado(
+        @Query("MotorizadoId") motorizadoId:Int)
+            : ResponseWsPagos
 }

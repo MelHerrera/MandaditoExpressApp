@@ -7,6 +7,7 @@ import android.widget.Toast
 import androidx.lifecycle.lifecycleScope
 import com.elmandaditoexpress.mandaditoexpressapp.adapters.PagosAdapter
 import com.elmandaditoexpress.mandaditoexpressapp.databinding.ActivityPagosBinding
+import com.elmandaditoexpress.mandaditoexpressapp.databinding.ActivityPagosMotorizadoBinding
 import com.elmandaditoexpress.mandaditoexpressapp.dto.ResponseWsPago
 import com.elmandaditoexpress.mandaditoexpressapp.dto.ResponseWsPagos
 import com.elmandaditoexpress.mandaditoexpressapp.network.ApiAdapter
@@ -16,34 +17,34 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-class PagosActivity : AppCompatActivity() {
-    private lateinit var binding : ActivityPagosBinding
+class PagosMotorizadoActivity : AppCompatActivity() {
+    private lateinit var binding:ActivityPagosMotorizadoBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityPagosBinding.inflate(layoutInflater)
+        binding = ActivityPagosMotorizadoBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         binding.vSwipeRefresh.isRefreshing=true
-        getPagosDelCliente(Utils.personaId)//obtener inicialmente los pagos cuando carga la pantalla
+        getPagosDelMotorizado(Utils.personaId)//obtener inicialmente los pagos cuando carga la pantalla
         binding.vSwipeRefresh.isRefreshing=false
 
         binding.vSwipeRefresh.setOnRefreshListener {
-            getPagosDelCliente(Utils.personaId)
+            getPagosDelMotorizado(Utils.personaId)
             binding.vSwipeRefresh.isRefreshing=false
         }
     }
 
-    private fun getPagosDelCliente(clienteId:Int) {
+    fun getPagosDelMotorizado(motorizadoId:Int){
         lateinit var apiResponse: ResponseWsPagos
 
         lifecycleScope.launch {
             withContext(Dispatchers.IO)
             {
                 try {
-                    apiResponse = ApiAdapter.apiClient.getPagosDelCliente(clienteId)
+                    apiResponse = ApiAdapter.apiClient.getPagosDelMotorizado(motorizadoId)
                 } catch (e: Exception) {
                     Toast.makeText(applicationContext, e.message, Toast.LENGTH_LONG).show()//creo que se debe cambiar al Dispatcher.Main sino el toast causara una exepcion
                 }

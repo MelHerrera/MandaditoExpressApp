@@ -2,7 +2,7 @@
 
 <com.google.android.material.card.MaterialCardView
     android:layout_height="wrap_content"
-    android:layout_width="200dp"
+    android:layout_width="150dp"
     android:id="@+id/item_CardEnvio"
     android:layout_margin="@dimen/medium_margin"
     android:checkable="true"

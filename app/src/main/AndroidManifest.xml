@@ -13,6 +13,10 @@
         android:theme="@style/Theme.MandaditosExpress"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".PagosMotorizadoActivity"
+            android:exported="false"
+            android:label="@string/app_name" />
+        <activity
             android:name=".ResetPasswordActivity"
             android:exported="false" />
         <activity
