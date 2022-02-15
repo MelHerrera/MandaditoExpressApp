@@ -31,7 +31,6 @@
                 app:layout_constraintBottom_toTopOf="@+id/vProgressBar"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"/>
-
             <ProgressBar
                 android:id="@+id/vProgressBar"
                 style="?android:attr/progressBarStyle"
@@ -71,7 +70,6 @@
                     android:textColor="@color/purple_500"
                     android:textStyle="bold" />
             </androidx.appcompat.widget.LinearLayoutCompat>
-
 
             <TextView
                 android:id="@+id/vTipoServicioFiltrado"

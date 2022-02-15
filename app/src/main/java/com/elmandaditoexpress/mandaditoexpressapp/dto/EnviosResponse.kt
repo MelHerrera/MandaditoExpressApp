@@ -18,3 +18,6 @@ data class ResponseWsEnvio(
 data class ResponseWsEnvios(
     @SerializedName("Envios") var envios: ArrayList<ResponseWsEnvio>
 ) : Serializable, Response()
+
+class ResponseWsFinalizarEnvio(
+) : Serializable, Response()

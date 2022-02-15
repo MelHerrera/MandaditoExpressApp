@@ -8,7 +8,7 @@
     <string name="txtentrar">Iniciar Sesión</string>
     <string name="iniciar_sesion">Iniciar Sesión</string>
     <string name="olvidar_contraseña"><u>He olvidado mi contraseña</u></string>
-    <string name="guardar_inicio">Guardar inicio de sesión</string>
+    <string name="guardar_inicio">Guardar usuario</string>
     <string name="invitado"><u>Invitado</u></string>
     <string name="registrarse"><u>Registrarse</u></string>
     <string name="nombres">Nombres</string>

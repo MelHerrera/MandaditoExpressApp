@@ -65,4 +65,16 @@ interface ApiClient {
     suspend fun getPagosDelMotorizado(
         @Query("MotorizadoId") motorizadoId:Int)
             : ResponseWsPagos
+
+    //Obtener envios asignados y realizados por un motorizado
+    @GET("EnviosWS/GetEnviosDelMotorizado")
+    suspend fun getEnviosDelMotorizado(
+        @Query("MotorizadoId") motorizadoId:Int,
+        @Query("Estado") estado:Int
+    ): ResponseWsEnvios
+
+    @POST("EnviosWS/FinalizarEnvio")
+    suspend fun finalizarEnvio(
+        @Query("EnvioId") envioId: Int
+    ): ResponseWsFinalizarEnvio
 }

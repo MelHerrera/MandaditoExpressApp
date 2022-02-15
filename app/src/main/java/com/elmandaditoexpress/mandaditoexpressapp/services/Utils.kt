@@ -6,13 +6,17 @@ import android.graphics.BitmapFactory
 import android.graphics.drawable.GradientDrawable
 import android.util.Patterns
 import com.elmandaditoexpress.mandaditoexpressapp.dto.enums.EnumEstadoDeEnvio
+import com.elmandaditoexpress.mandaditoexpressapp.dto.enums.EnumRoles
+import java.util.*
 import java.util.regex.Pattern
+import kotlin.collections.ArrayList
 import kotlin.reflect.KMutableProperty1
 
 class Utils {
     companion object
     {
         var personaId:Int = -1
+        var personaRol:EnumRoles? = null
 
         fun <T, Y> ArrayList<T>.arrayListValuesOfField(property: KMutableProperty1<T, Y>): ArrayList<Y> {
             val output = ArrayList<Y>()
@@ -34,6 +38,15 @@ class Utils {
                 EnumEstadoDeEnvio.REALIZADO.valor -> EnumEstadoDeEnvio.REALIZADO
                 EnumEstadoDeEnvio.RECHAZADO.valor -> EnumEstadoDeEnvio.RECHAZADO
                 else -> EnumEstadoDeEnvio.PREDETERMINADO
+            }
+        }
+        fun getEnumEstadoDelEnvioValueOf(name:String): Int {
+            return when(name.uppercase(Locale.getDefault())){
+                EnumEstadoDeEnvio.SOLICITUD.name -> EnumEstadoDeEnvio.SOLICITUD.valor
+                EnumEstadoDeEnvio.ENPROCESO.name -> EnumEstadoDeEnvio.ENPROCESO.valor
+                EnumEstadoDeEnvio.REALIZADO.name -> EnumEstadoDeEnvio.REALIZADO.valor
+                EnumEstadoDeEnvio.RECHAZADO.name -> EnumEstadoDeEnvio.RECHAZADO.valor
+                else -> EnumEstadoDeEnvio.PREDETERMINADO.valor
             }
         }
 

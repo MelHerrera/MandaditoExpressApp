@@ -63,7 +63,7 @@ class EnviosActivity : AppCompatActivity() {
 
     private fun mostrarEnvios(envios:ArrayList<ResponseWsEnvio>){
         binding.vRecyclerEnvios.layoutManager = FlexboxLayoutManager(applicationContext)
-        binding.vRecyclerEnvios.adapter = EnviosAdapter(envios)
+        binding.vRecyclerEnvios.adapter = EnviosAdapter(envios, applicationContext)
     }
 
     override fun onSupportNavigateUp(): Boolean {

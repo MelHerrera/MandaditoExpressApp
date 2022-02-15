@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
+import com.elmandaditoexpress.mandaditoexpressapp.EnviosAsignadoMotorizadoActivity
 import com.elmandaditoexpress.mandaditoexpressapp.PagosMotorizadoActivity
 import com.elmandaditoexpress.mandaditoexpressapp.R
 import com.elmandaditoexpress.mandaditoexpressapp.dto.ResponseWsImagenPersona
@@ -22,6 +23,7 @@ import kotlinx.coroutines.withContext
 class MotorizadoMenuFragment(val message:String?) : Fragment() {
     private lateinit var vUserImage: ImageView
     private lateinit var vCardEnvios:CardView
+    private lateinit var vCardPagosMotorizados:CardView
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         // Inflate the layout for this fragment
@@ -29,13 +31,18 @@ class MotorizadoMenuFragment(val message:String?) : Fragment() {
 
         vUserImage = mView.findViewById(R.id.vImageUser)
         vCardEnvios = mView.findViewById(R.id.vCardEnviosMotorizado)
+        vCardPagosMotorizados = mView.findViewById(R.id.vCardPagosMotorizado)
         mView.findViewById<TextView>(R.id.vTxtSaludo).text = message
         getUserImage()
         setHasOptionsMenu(true)
 
         vCardEnvios.setOnClickListener{
+            startActivity(Intent(context, EnviosAsignadoMotorizadoActivity::class.java))
+        }
+        vCardPagosMotorizados.setOnClickListener {
             startActivity(Intent(context,PagosMotorizadoActivity::class.java))
         }
+
         return mView
     }
 
