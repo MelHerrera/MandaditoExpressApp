@@ -6,6 +6,7 @@ import android.view.*
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
@@ -76,5 +77,13 @@ class ClienteMenuFragment(private val message:String?) : Fragment() {
         inflater.inflate(R.menu.preferencias_menu,menu)
         super.onCreateOptionsMenu(menu, inflater)
     }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId)
+        {
+            R.id.itemAbout-> { startActivity(Intent(context, AcercaDe::class.java))}
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
 
 }
